@@ -1,0 +1,372 @@
+*{ /*Aqui eu configuro toda a pagina */
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+}
+
+html,body{
+	height:100%;
+}
+
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.clear{
+	clear: both;
+}
+
+header{
+	width: 100%;
+	height: 90vh;
+	min-height: 800px;
+	padding: 40px 2%;
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/capa.png');
+	font-weight: 300;
+}
+
+header nav{
+	float: right;
+}
+
+nav.mobile-menu{
+	display: none;
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	background-image: url('../img/menu.png');
+	background-size: 100% 100%;
+}
+
+nav.mobile-menu:hover ul{
+	opacity: 1;
+}
+
+nav.mobile-menu ul{
+	opacity: 0;
+	transition: 1s;
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 80px;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav.mobile-menu ul li{
+	padding: 8px 0;
+	transition: 0.4s;
+	border-bottom: 1px solid black;
+}
+
+nav.mobile-menu ul li:hover{
+	background-color: rgb(230,230,230);
+}
+
+nav.mobile-menu ul li a{
+	color: black;
+	text-decoration: none;
+}
+
+header .logo{
+	float: left;
+	width: 160px;
+	height: 40px;
+	background-color: #ccc;
+}
+
+header nav.desktop-menu ul{
+	list-style-type: none;
+}
+
+header nav.desktop-menu li{
+	float: left;
+	margin: 0 20px;
+}
+
+header nav.desktop-menu li a{
+	color: white;
+	text-decoration: none;
+}
+
+.chamada1{
+	max-width: 600px;
+	float: right;
+	margin: 140px 150px;
+}
+
+.chamada1 h2{
+	font-weight: 300;
+	font-size: 30px;
+	color: white;
+}
+
+.chamada1 p{
+	font-size: 15px;
+	color: white;
+	margin-top: 10px;
+}
+
+section.sessao1{
+	width: 100%;
+	background-color: #472562;
+	padding: 0 2%;
+	height: 400px;
+}
+
+section.sessao1 .container{
+	max-width: 1000px;
+	height: calc(100% + 30px);
+}
+
+.texto-sessao1{
+	height: 50%;
+	float:left;
+	width: 50%;
+	position: relative;
+	left:55px;
+	color:white;
+	margin-top: 60px;
+	padding-left: 80px;
+}
+
+.texto-sessao1 h2{
+	font-size: 26px;
+	font-weight: 300;
+}
+
+.texto-sessao1 p{
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.texto-sessao1 ul{
+	font-size: 15px;
+	list-style-position: outside;
+	padding-left: 15px;
+	margin-top: 10px;
+}
+
+.texto-sessao ul li{
+	margin-top: 8px;
+	width: 100%;
+}
+
+.btn1-texto{
+	background-color: #FF703D;
+	width: 165px;
+	height: 44px;
+	font-size: 15px;
+	color: white;
+	cursor: pointer;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 44px;
+	border-radius: 30px;
+}
+
+.device-sessao1{
+	float: left;
+	width: 50%;
+	position: relative;
+	top:-30px;
+	height: 100%;
+	background-image: url('../img/device.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.sessao2{
+	padding-left: 2%;
+	padding-right: 2%;
+	background-color: white;
+	text-align: center;
+}
+
+.session2 .container{
+	max-width: 1000px;
+}
+
+.sessao2 h2{
+	color: #472663;
+	font-weight: 300;
+}
+
+.sessao2 p {
+	margin-top: 30px;
+	max-width: 900px;
+	display: inline-block;
+}
+
+.sessao2 img{
+	position: relative;
+	top: 70px;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.sessao3{
+	width: 100%;
+}
+
+.part1{
+	color: white;
+	float:left;
+	width: 50%;
+	padding:140px 0px 90px 0;
+	background: #835FA7;
+}
+
+.wraper-part1{
+	max-width: 600px;
+	float: right;
+	padding-right: 30px;
+}
+
+.part1 h2{
+	font-weight: 300;
+	font-style: italic;
+	font-size: 23px;
+}
+
+.part1 p{
+	font-size: 15px;
+	line-height: 30px;
+	margin-top: 10px;
+}
+
+.part2{
+	float: left;
+	width: 50%;
+	padding: 140px 0 90px 0;
+	background: #dcd5ed;
+}
+
+.sobre-autor{
+	float: left;
+	max-width: 600px;
+	padding-left: 30px;
+}
+
+.titulo-autor{
+	float: left;
+	width: 100%;
+}
+
+.titulo-autor h2{
+	float: left;
+	padding-right: 20px;
+}
+
+.titulo-autor .img-autor{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	position: relative;
+	top:-4px;
+	background-color: green;
+}
+
+@media screen and (max-width: 830px){
+    .chamada1{
+	max-width: none;
+	width: 100%;
+	text-align: center;
+	float:none;
+	margin: 170px 0;
+	}
+
+	.chamada1 h2{
+	font-weight: 300;
+	font-size: 30px;
+	padding: 0 10px;
+	color: white;
+	}
+
+	.chamada1 p{
+	font-size: 15px;
+	color: white;
+	margin-top: 10px;
+    }
+  }
+
+@media screen and (max-width: 768px){
+
+	header{
+	width: 100%;
+	height: auto;
+	min-height: 90vh;
+
+    }
+
+	nav.desktop-menu{
+		display: none;
+	}
+
+	nav.desktop-menu{
+		display: block;
+	}
+
+	.chamada1{
+	max-width: none;
+	width: 100%;
+	text-align: center;
+	float:none;
+	margin: 100px 0;
+	}
+
+	.chamada1 h2{
+	font-weight: 300;
+	font-size: 30px;
+	padding: 0 10px;
+	color: white;
+	}
+
+	.chamada1 p{
+	font-size: 15px;
+	color: white;
+	margin-top: 10px;
+    }
+
+	section.sessao1{
+		padding: 40px 2%;
+		height: auto;
+		text-align: center;
+	}
+
+	.texto.sessao1{
+		width: 100%;
+		margin-top: 0;
+		position: static;
+		float: none;
+		display: inline-block;
+	}
+
+	.texto-sessao1 ul{
+		display: inline-block;
+		margin-top: 20px;
+	}
+
+	.texto-sessao1 ul li{
+		float: none;
+		text-align: left;
+	}
+
+	.btn1-texto{
+		display: 
+	}
+
+	.device-session1{
+		display: none;
+	}
+
+	.sessao2{
+		padding: 40px 2%;
+	}
+}

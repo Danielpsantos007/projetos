@@ -1,0 +1,182 @@
+*{ /*Aqui eu configuro toda a pagina */
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+}
+
+.center{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header{
+	/*min-width: 1200px;*/
+	width: 100%;
+	height: 60px;
+	/*background-color: #024282;*/
+	background-color: black;
+}
+
+.titulo {
+	font-family: "Times New Roman", Times, serif;
+	font-size:40px;
+	color:white;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.container-banner{
+	width: 100%;
+	height: 400px;
+	background-image:url('../img/banner.jpg'); 
+	/*usando método responsivo*/
+	background-size: cover;
+	background-position: center;
+
+}
+
+.container-banner > .center{
+	height: 100%;
+}
+
+.form{
+	padding: 10px;
+	width: 250px;
+	height: calc(100% + 15px);
+	float: left;
+	position: relative; /*com isso posso alterar altura e largura*/
+	top: 0px;
+	left: 30px;
+	border-width: 12px;
+	border-color: rgba(120,120,120,0.5);
+	border-style: solid;
+	background-color: #024282;
+	background-clip: border-box;
+}
+
+.form img{
+	margin-bottom: 20px;	
+}
+
+.form h2{
+	font-weight: normal;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.input-container{
+	margin-top:20px;
+	text-align: center;
+}
+
+.input-container span{
+	display: inline-block;
+	width: 100%;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.input-container input[type=text], [type=password]{
+	margin-top: 2px;
+	width: 110px;
+	height: 30px;
+	font-size: 17px;
+
+}
+
+.form .input-submit-container{
+	margin-top: 20px; 
+	text-align: center;
+}
+
+.form input[type=submit]{
+	width: 100px;
+	height: 30px;
+	color: white;
+	background-color: #024282;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.form input[type=submit]:hover{
+	background-color: #5b71eb;
+}
+
+.container-2{
+	padding: 15px 0;
+	background-color: #DDDDDD; 	
+}
+
+.container-2 h2{
+	font-family: "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	margin-top: 15px;
+	text-align: center;
+}
+
+.container-2 p{
+	color: #024282;
+	padding-top: 20px;
+	width: 600px;
+	margin: 10px 0;
+	display: inline-block;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+}
+
+.arrow{
+	position: relative;
+	top: 35px;
+	width: 40px;
+	height: 40px;
+	background-image: url('../img/arrow.png');
+	background-size: 100% 100%;
+}
+
+.section-1{
+	padding: 45px 0;	
+}
+
+.container-section{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.container-single{;
+	display: inline-block;
+	width: 25%;
+	margin-top: 20px;
+}
+
+.container-single img{
+	width: 70px;
+	
+}
+
+.container-single h3{
+	float: none;
+	color: #024282;
+}
+
+.footer{
+	position: relative;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	clear:both;
+	border-top: 2px solid #888888;
+	text-align: center;
+	background-color: #024282;
+}
+
+.footer span{
+	color: white;
+	
+}
