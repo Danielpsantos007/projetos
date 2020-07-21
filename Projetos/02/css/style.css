@@ -77,7 +77,10 @@ header .logo{
 	float: left;
 	width: 160px;
 	height: 40px;
-	background-color: #ccc;
+	background-image: url('../img/cyberinfo.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 header nav.desktop-menu ul{
@@ -97,12 +100,12 @@ header nav.desktop-menu li a{
 .chamada1{
 	max-width: 600px;
 	float: right;
-	margin: 140px 150px;
+	margin: 200px 150px;
 }
 
 .chamada1 h2{
 	font-weight: 300;
-	font-size: 30px;
+	font-size: 40px;
 	color: white;
 }
 
@@ -125,7 +128,6 @@ section.sessao1 .container{
 }
 
 .texto-sessao1{
-	height: 50%;
 	float:left;
 	width: 50%;
 	position: relative;
@@ -142,14 +144,13 @@ section.sessao1 .container{
 
 .texto-sessao1 p{
 	font-size: 15px;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .texto-sessao1 ul{
 	font-size: 15px;
 	list-style-position: outside;
 	padding-left: 15px;
-	margin-top: 10px;
 }
 
 .texto-sessao ul li{
@@ -184,7 +185,7 @@ section.sessao1 .container{
 .sessao2{
 	padding-left: 2%;
 	padding-right: 2%;
-	background-color: white;
+	background: white;
 	text-align: center;
 }
 
@@ -236,7 +237,7 @@ section.sessao1 .container{
 
 .part1 p{
 	font-size: 15px;
-	line-height: 30px;
+	line-height: 35px;
 	margin-top: 10px;
 }
 
@@ -258,9 +259,22 @@ section.sessao1 .container{
 	width: 100%;
 }
 
-.titulo-autor h2{
+.wraper-titulo-autor{
 	float: left;
+}
+
+.titulo-autor h2{
+	color: #232323;
+	font-weight: 400;
+	font-size: 21px;
 	padding-right: 20px;
+}
+
+.titulo-autor p{
+	font-size: 15px;
+	color: #232323;
+	font-style: italic;
+	font-weight: 300;
 }
 
 .titulo-autor .img-autor{
@@ -270,8 +284,153 @@ section.sessao1 .container{
 	border-radius: 20px;
 	position: relative;
 	top:-4px;
-	background-color: green;
+	background-image: url('../img/bill.jpg');
+	background-size: 100% 100%;
 }
+
+.texto-autor{
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.texto-autor p{
+	color: #232323;
+	font-size: 15px;
+}
+
+.slider-bullets{
+	width: 100%;
+	float: left;
+	padding-left: 30px;
+	margin-top: 12px;
+}
+
+.slider-bullets span{
+	/*Span é Display Line, cou seja seu tamanho é com base do tamanho do texto, com isso não usamos dimensões. Ou usamos display ou usamos float.*/
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-right: 8px;
+	cursor: pointer;
+	border-radius: 8px;
+	background-color: rgb(200,200,200);
+}
+
+section.sessao4{
+	background-color: #472563; 
+	padding:100px 0;
+}
+
+.form{
+	float: left;
+	width: 50%;
+	color: white;
+	padding-left: 10px;
+}
+
+.form h2{
+	font-size: 23px;
+	font-weight: 300;
+}
+
+.form p{
+	font-size: 15px;
+	font-weight: 300;
+	max-width: 400px;
+	padding-right: 10px;
+}
+
+.form form{
+	margin-top: 15px;
+}
+
+.form form input[type=text]{
+	width: 90%;
+	max-width: 480px;
+	margin-top: 8px;
+	height: 58px;
+	padding-left: 8px;
+	line-height: 58px;
+	border:1px solid rgb(200,200,200);
+}
+
+.form form textarea{
+	width: 90%;
+	margin-top: 8px;
+	max-width: 480px;
+	padding: 15px;
+	border: 1px solid rgb(200,200,200);
+	height: 160px;
+}
+
+.form form input[type=submit]{
+	border: 0;
+	background-color: #ff703d;
+	width: 165px;
+	height: 44px;
+	font-size: 13px;
+	color: white;
+	cursor: pointer;
+	margin-top: 15px;
+	border-radius: 30px;
+}
+
+.map-wraper{
+	float:left;
+	width: 50%;
+	padding: 0 10px;
+	color: white;
+}
+
+.map-wraper h2{
+	font-size: 23px;
+	font-weight: 300;
+}
+
+.map-wraper3{
+	margin-top: 10px;
+	width: 100%;
+	max-width: 480px;
+	position: relative;
+}
+
+.map-wraper2{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding-top: 100%;
+}
+
+.map{
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border: 5px solid rgb(200,200,200);
+}
+
+footer{
+	padding: 40px 0;
+	background: #192123;
+	color: white;
+}
+
+footer p:nth-of-type(1){
+	float: left;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+footer p:nth-of-type(2){
+	float: right;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
 
 @media screen and (max-width: 830px){
     .chamada1{
@@ -362,11 +521,50 @@ section.sessao1 .container{
 		display: 
 	}
 
-	.device-session1{
+	.device-sessao1{
 		display: none;
 	}
 
 	.sessao2{
 		padding: 40px 2%;
 	}
+
+	.form{
+		width: 100%;
+	}
+
+	.map-wraper{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 580px){
+	.part1{
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	.part2{
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	.sessao2 img{
+		top:70px;
+		margin-top: 20px;
+	}
+
+	footer{
+	text-align: center;;
+	}
+
+	footer p:nth-of-type(1){
+	float: none;
+	}
+
+	footer p:nth-of-type(2){
+	float: none;
+	margin-top: 8px;
+	}
+
 }
