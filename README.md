@@ -1,2 +1,2 @@
 # Curso-WebMaster
-Projetos particulars
+Projetos particulares
