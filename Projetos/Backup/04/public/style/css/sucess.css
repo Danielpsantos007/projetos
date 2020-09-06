@@ -1,0 +1,78 @@
+body, html {
+    height: 100vh;
+}
+
+#page-landing {
+    background: var(--color-primary);
+}
+
+#container img {
+    width: 100%;
+}
+
+#container {
+    width: 90vw;
+    max-width: 700px;
+    position: relative;
+}
+
+.sucess-cadastro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0 0 0;
+    padding: 0 2.8rem;
+}
+
+.sucess-cadastro h1{
+    color: var(--color-title-in-primary);
+    font-size: 5.4rem;
+    font-weight: 700;
+    font-family: Archivo, sans-serif;
+    margin-bottom: 1.6rem;
+    text-align: center;
+}
+
+.sucess-cadastro p {
+    color: var(--color-text-in-primary);
+    font-family: Poppins, sans-serif;
+    line-height: 2.7rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.linha {
+    border-bottom: 1px solid var(--color-secondary);
+    margin: 6rem 0 2rem;
+}
+
+@media (min-width: 730px) {
+    :root {
+        font-size: 62.5%; /* Todo 1rem vai ser relativo a 10px */
+    }
+
+    .sucess-cadastro {
+        margin: 0;
+    }
+
+}
+
+@media(min-height: 300px) {
+    .sucess-cadastro img{
+        margin-top: 250px;
+    }
+}
+
+@media(min-height: 500px) {
+    .sucess-cadastro img {
+        margin-top: 100px;
+    }
+}
+
+@media(min-height: 700px) {
+    .sucess-cadastro img {
+        margin-top: -100px;
+    }
+}
