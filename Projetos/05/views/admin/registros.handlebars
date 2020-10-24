@@ -1,0 +1,30 @@
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<h2>Lista de Registros</h2>
+{{#each registros}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{titulo}}</h4> 
+            <p>Prioridade: {{prioridade}}</p>
+            <p>N° do Chamado: {{chamado}}</p>            
+            <p>Criado: {{createdAt}}</p>
+            {{#if updatedAt}}
+            <p>Ultima atualização: {{updatedAt}}</p>
+            {{else}}
+            {{/if}}
+            <div class="card">
+            <div class="card-body">
+            <p>{{registro}}</p>
+            </div>            
+            </div>          
+            <br>
+            <a href='/admin/registros/update/{{_id}}'><button class='btn btn-success'>Atualizar</button></a>
+            <form action="/admin/registros/delet" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2">Deletar</button>
+            </form>
+            
+        </div>
+    </div>
+{{else}}
+
+{{/each}}

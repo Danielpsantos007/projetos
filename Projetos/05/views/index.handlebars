@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1 class="display-4">Olá, </h1>
+  <p class="lead">Seja bem vindo ao Diario de Bordo.</p>
+  <hr class="my-4">
+  <p>Não esqueça de sempre mante-la atualizada!</p>
+  <a class="btn btn-primary btn-lg" href="/usuarios/login" role="button">Login</a>
+</div>
+
+<h2>Veja abaixo as ultimas atualizações:</h2>
+
+{{#each registros}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{titulo}}</h4> 
+            <p>{{registro}}</p>
+            <small>Prioridade: {{prioridade}}</small>
+            <small>Data de criação: {{createdAt}}</small>
+            {{#if updatedAt}}
+            <small>Ultima atualização: {{updatedAt}}</small>
+            {{else}}
+            {{/if}}
+        </div>            
+    </div>              
+{{else}}
+</h3>Nao há nenhum registro<h3>
+{{/each}}

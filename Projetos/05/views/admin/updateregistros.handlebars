@@ -1,0 +1,64 @@
+<script src="https://momentjs.com/downloads/moment.js"></script> 
+{{#each erros}}
+  <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+{{/each}}
+
+<h2>Atualização de Registros</h2>
+
+<div class=card style="width: 70rem;">
+    <div class=card-body>
+      <form action="/admin/registros/update" method="POST">
+      <input type='hidden' name='id' value={{registros._id}}>      
+      <div class="form-row mb-4">
+        <div class="col-md-9">
+          <label for="titulo">Titulo:</label>
+          <input type="text" class="form-control" id="titulo" name="titulo" value="{{registros.titulo}}">
+        </div>
+      </div>  
+
+      <div class="form-row mt-4">    
+        <div class="form-group">
+          <label for="prioridade">Prioridade</label>
+          <select class="form-control" id="prioridade" name="prioridade" value="{{registros.prioridade}}">
+          <option>Normal</option>
+          <option>Baixa</option>
+          <option>Alta</option>
+          <option>Critico</option>
+          </select>          
+        </div>
+            
+        <div class="form-group">
+          <label for="tipo">Tipo</label>
+          <select class="form-control" id="tipo" name="tipo" value="{{registros.tipo}}">
+          <option>Pendência</option>
+          <option>Abend</option>
+          <option>Zabbix</option>
+          <option>Backup</option>
+          <option>Restore</option>
+          </select>          
+        </div>
+     
+        <div class="col-md-3 mb-3">
+          <label for="chamado">N° do Chamado</label>
+          <input type="text" class="form-control " id="chamado" name="chamado" value="{{registros.chamado}}">          
+        </div>
+      </div> 
+
+      <div class="col-md-9">
+        <div class="form-group">
+          <label for="registro">Registro:</label>
+          <br>
+          Criado: {{registros.createdAt}}
+          <input type="textarea" rows="5" class="form-control " id="registro" name="registro" value="{{registros.registro}}">
+          {{#if registros.updatedAt}}
+          Ultima atualização: {{registros.updatedAt}}
+          {{else}}
+          {{/if}}
+          </div>
+      </div>                          
+         <button class="btn btn-primary" type="submit">Atualizar</button>    
+              
+      </form>      
+  </div>
+</div>
