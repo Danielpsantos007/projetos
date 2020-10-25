@@ -50,7 +50,7 @@ router.get('/registros/update/:id', eAdmin, (req,res) =>{
     Registro.findOne({_id:req.params.id}).lean().then((registros)=> {
          res.render('admin/updateregistros', {registros: registros})         
     }).catch((err) =>{
-        res.flash('fail_msg' , 'Categoria não encontrada')
+        res.flash('fail_msg' , 'Registro não encontrada')
         res.redirect('/admin/registros')
     })
 })
@@ -81,7 +81,7 @@ router.post('/registros/update', eAdmin,(req,res) =>{
 
 router.post('/registros/delet', eAdmin2, (req,res) => {
     Registro.remove({_id: req.body.id}).then (() => {
-        req.flash('ok_msg', 'Categoria Deletada com Sucesso!')
+        req.flash('ok_msg', 'Registro Deletado com Sucesso!')
         res.redirect('/admin/registros')
     }).catch((err) => {
         req.flash('fail_msg', 'ERRO - Não foi possível deletar o registro!'+err)

@@ -8,11 +8,20 @@ const passport = require('passport')
 const {eAdmin2} = require('../helpers/eAdmin2')
 const {eAdmin} = require('../helpers/eAdmin')
 
-router.get('/registro', eAdmin2,(req,res) =>{
+router.get('/registro', eAdmin2, (req,res)=>{
+    Usuario.find().sort({ login:'desc' }).lean().then((registro)=>{
+    res.render('usuarios/listregistro', {registro: registro})    
+    }).catch((erro) => {
+        req.flash("fail_msg", "Ops, houve um erro na listagem!")
+        res.redirect('/')
+    })    
+})
+
+router.get('/registro/add', eAdmin2,(req,res) =>{
     res.render('usuarios/registro')
 })
 
-router.post('/registro', eAdmin2,(req,res) => {
+router.post('/registro/add', eAdmin2,(req,res) => {
 
     //Validação de formularios
     var erros = []
@@ -26,13 +35,13 @@ router.post('/registro', eAdmin2,(req,res) => {
     }
     
     if(erros.length > 0){
-        res.render("usuarios/registro", {erros: erros})
+        res.render("usuarios/registro/novo", {erros: erros})
     }else{
         
-        Usuario.findOne({usuario: req.body.usuario}).then((usuario) => {
-            if(usuario){
+        Usuario.findOne({login: req.body.login}).then((login) => {
+            if(login){
                 req.flash("fail_msg", "ERRO - Usuario já Existente!")
-                res.redirect("/usuarios/registro")
+                res.redirect("/usuarios/registro/add")
             }else{
                     const novoUsuario = new Usuario ({
                     nome: req.body.nome,
@@ -55,7 +64,7 @@ router.post('/registro', eAdmin2,(req,res) => {
                             res.redirect('/')
                         }).catch((erro) => {
                             req.flash('fail_msg', 'Usuario Cadastrado com Sucesso!')
-                            res.redirect('/usuarios/registro')
+                            res.redirect('/usuarios/registro/add')
                         })
                     })
                 })

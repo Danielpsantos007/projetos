@@ -1,5 +1,5 @@
 if(process.env.NODE_ENV == 'production'){
-    module.exports = {mongoURI: 'mongodb+srv://diprmz28:Mateus0818@diariodb.kxxdu.mongodb.net/diariodb?retryWrites=true&w=majority'}
+    module.exports = {mongoURI: 'mongo "mongodb+srv://diariodb.zi8tn.mongodb.net/diariodb" --username diprmz28'}
     console.log("Servidor rodando na Nuvem");
 }else{
     module.exports = {mongoURI: 'mongodb://localhost:27015/diariodb'}

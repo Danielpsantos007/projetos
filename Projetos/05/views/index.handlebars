@@ -1,9 +1,15 @@
 <div class="jumbotron">
-  <h1 class="display-4">Olá, </h1>
+  <h1 class="display-4">
+    Olá, {{#each user}}
+      {{nome}}
+    {{/each}}</h1>
   <p class="lead">Seja bem vindo ao Diario de Bordo.</p>
   <hr class="my-4">
-  <p>Não esqueça de sempre mante-la atualizada!</p>
-  <a class="btn btn-primary btn-lg" href="/usuarios/login" role="button">Login</a>
+  <p>Não esqueça de sempre mante-la atualizado!</p>
+  {{#if user}}          
+    {{else}}
+    <a class="btn btn-primary btn-lg" href="/usuarios/login" role="button">Login</a>
+    {{/if}}  
 </div>
 
 <h2>Veja abaixo as ultimas atualizações:</h2>

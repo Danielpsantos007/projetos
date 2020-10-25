@@ -27,6 +27,9 @@ const RegistrosSchema = new mongoose.Schema({
         type: String,
         required:true
     },
+    usuario:{
+        type:String
+    },
     createdAt:{
         type:String,
         default:datanova

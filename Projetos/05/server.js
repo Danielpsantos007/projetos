@@ -101,6 +101,10 @@ app.get('/registros', (req,res)=>{
     res.send('Lista de Registros')
 })
 
+app.get('/registro', (req,res)=>{
+    res.send('Lista de Usuarios')
+})
+
 app.use('/admin', admin)
 app.use('/usuarios', usuarios)
 

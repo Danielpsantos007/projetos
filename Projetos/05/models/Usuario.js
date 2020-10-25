@@ -18,7 +18,6 @@ const UsuariosSchema = new mongoose.Schema({
         default: 0
     },
 
-
     senha:{
         type: String,
         required:true
