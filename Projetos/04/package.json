@@ -10,7 +10,7 @@
     "url": "git+https://github.com/Danielpsantos007/Curso-WebMaster/tree/master/Projetos/04"
   },
   "devDependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
